@@ -1,5 +1,40 @@
 .Card{
-  background-color: #61dafb;
-  width: 500px;
-  height:500px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  vertical-align: center;
+  width: 300px;
+  margin: 0 0;
+  &-image{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &_figcaption{
+      text-align: center;
+    }
+  }
+  &-price{
+    font-weight: bold;
+    margin: 0 auto;
+    font-size: 1.5rem;
+  }
+  &-price::after {
+    content:" ₽";
+  }
+  &-button{
+    &__buy{
+      background-color: lightcoral;
+      border: none;
+      color: white;
+      padding: 10px 30px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      margin: 8px 2px;
+      cursor: pointer;
+      border-radius: 16px;
+    }
+
+  }
 }
