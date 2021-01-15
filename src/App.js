@@ -5,8 +5,16 @@ import data from './data/data.json';
 import React from "react";
 
 function App() {
+  let arrayOfCards =[];
+  for (let i =0; i<data.product.length;i++){
+    arrayOfCards.push(<Card imgSrc ={data.product[i].img} figCaption={data.product[i].name} price={data.product[i].price}/>)
+  }
   return (
-      <Card imgSrc ={data.product[0].img} figCaption={data.product[0].name} price={data.product[0].price}/>
+  <main className='Cards-wrapper'>
+    { arrayOfCards }
+  </main>
+
+
 
   );
 }
