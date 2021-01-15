@@ -2,7 +2,7 @@ import React from "react";
 import './Card.scss';
 
 function Card(props) {
-    const {imgSrc, figCaption, price} = props;
+    const {imgSrc, figCaption, price, showModal} = props;
     return (
         <div className="Card">
             <figure className='Card-image'>
@@ -14,7 +14,7 @@ function Card(props) {
             <span className='Card-price'>
                    {Number(price).toLocaleString('ru')}
             </span>
-            <button className='Card-button__buy'>
+            <button className='Card-button__buy' onClick={showModal} >
                     Купить
             </button>
         </div>
