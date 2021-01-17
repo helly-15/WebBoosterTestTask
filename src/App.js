@@ -7,30 +7,23 @@ import ModalWindow from "./Modal/ModalWindow";
 
 function App() {
   const [modalState, setModalState] = useState(false);
-
-  let  openModal= (e)=> {
+  let  openModal = (e) => {
     setModalState(true)
   }
-  let  closeModal= (e)=> {
+  let  closeModal = (e) => {
     setModalState(false);
-
   }
-
-  let arrayOfCards =[];
-  for (let i =0; i<data.product.length;i++){
+  let arrayOfCards = [];
+  for (let i = 0; i < data.product.length;i++){
     arrayOfCards.push(<Card imgSrc = {data.product[i].img} figCaption = {data.product[i].name} price = {data.product[i].price} showModal = {openModal}/>)
   };
-
-
-
   return (
       <>
-        <main className='Cards-wrapper'>
+        <main className = 'Cards-wrapper'>
            { arrayOfCards }
         </main>
-        <ModalWindow show ={modalState} close ={closeModal}/>
+        <ModalWindow show = {modalState} close = {closeModal}/>
       </>
-
   );
 }
 
